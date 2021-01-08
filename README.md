@@ -1,4 +1,4 @@
-# player
+# test
 
 ## Project setup
 ```
@@ -17,3 +17,11 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+## 注意：没做注册功能，登录请用
+
+账号：123
+
+密码：123
