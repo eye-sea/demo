@@ -136,7 +136,7 @@ export default {
       //轮播图
       swiperOption:{
         loop : true,
-        effect : 'cube',
+        effect : 'fade',
         cubeEffect: {
           slideShadows: true,
           shadow: true,
@@ -172,10 +172,6 @@ export default {
         {
           id:'',
           img:'/imgs/slider/slide-4.jpg'
-        },
-        {
-          id:'',
-          img:'/imgs/slider/slide-1.jpg'
         }
       ],
       // 菜单
