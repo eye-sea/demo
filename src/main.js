@@ -19,9 +19,9 @@ axios.interceptors.response.use(function(response) {
   if (res.status == 0) { //请求成功
     return res.data;
   } else if(res.status == 10) { //未登录
-    if(path != '#/index') {              //如果路由不是主页则
+    // if(path != '#/index') {              //如果路由不是主页则
       window.location.href = '/#/login'  //跳转到登录页面
-    }
+    // }
     return Promise.reject(res);
   } else {
     // alert(res.msg);

@@ -5,7 +5,7 @@
       <div class="swiper-box">
         <!-- 菜单 -->
         <div class="nav-menu">
-          <!-- 右边ul li菜单栏 -->
+          <!-- 左边ul li菜单栏 -->
           <ul class="menu-wrap">
             <li class="menu-item">
               <a href="javascript:;">手机 电话卡</a>

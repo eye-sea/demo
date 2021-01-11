@@ -119,7 +119,7 @@ export default {
       }).then((res) => {
         this.loading = false;
         this.busy = false;  //开放scrollMore
-        this.list = this.list.concat(res.list);
+        this.list = res.list;
         this.total = res.total;
         this.showNextPage = res.hasNextPage; //控制最后一页不显示加载更多按钮
       }).catch(() => {

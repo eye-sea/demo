@@ -11,7 +11,7 @@
         <div class="cart-box">
           <!-- 购物车头部 -->
           <ul class="cart-item-head">
-            <li class="col-1"><span class="checkbox" @click="toggleAll"></span>全选</li>
+            <li class="col-1"><span class="checkbox" :class="{'checked':allChecked}" @click="toggleAll"></span>全选</li>
             <li class="col-3">商品名称</li>
             <li class="col-1">单价</li>
             <li class="col-2">数量</li>
@@ -115,7 +115,7 @@ export default {
       this.list = res.cartProductVoList;
       this.cartTotalPrice = res.cartTotalPrice;
       this.allChecked = res.selectedAll;
-      this.checkedNum = this.list.filter(item=>item.productSelected).length;
+      this.checkedNum = this.list.filter(item=>item.productSelected).length; //选中的商品数量
       // console.log(res);
     },
     /*//更新购物车数量

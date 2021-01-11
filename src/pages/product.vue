@@ -23,10 +23,18 @@
       </div>
       <div class="item-bg-2"></div>
       <div class="item-bg-3"></div>
-      <div class="item-swiper">
-        <img src="/imgs/product/gallery-2.png" alt="" style="width:300px">
-        <p class="desc">小米8 AI变焦双摄拍摄</p>轮播图 to-do
-      </div>
+      <!-- <div class="item-swiper">
+        <swiper :options="swiperOption">
+          <swiper-slide><img src="/imgs/product/gallery-2.png" alt=""></swiper-slide>
+          <swiper-slide><img src="/imgs/product/gallery-3.png" alt=""></swiper-slide>
+          <swiper-slide><img src="/imgs/product/gallery-4.png" alt=""></swiper-slide>
+          <swiper-slide><img src="/imgs/product/gallery-5.jpg" alt=""></swiper-slide>
+          <swiper-slide><img src="/imgs/product/gallery-6.jpg" alt=""></swiper-slide>
+          Optional controls
+          <div class="swiper-pagination"  slot="pagination"></div>
+        </swiper>
+        <p class="desc">小米8 AI变焦双摄拍摄</p>
+      </div> -->
       <div class="item-video">
         <h2>60帧超慢动作摄影<br/>慢慢回味每一瞬间的精彩</h2>
         <p>后置960帧电影般超慢动作视频，将眨眼间的美妙展现得淋漓尽致！<br/>更能AI 精准分析视频内容，15个场景智能匹配背景音效。</p>
@@ -54,10 +62,13 @@
 </template>
 
 <script>
+// import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import ProductParam from '../components/ProductParam';
 export default {
   name: 'product',
   components: {
+    // swiper,
+    // swiperSlide,
     ProductParam
   },
   data() {
@@ -65,6 +76,16 @@ export default {
       // showSlide: false, //6 过渡效果
       showSlide: '', //控制动画效果
       product: {}, //保存商品信息
+      // swiperOption:{
+      //   autoplay:true,
+      //   slidesPerView:3, //设置slider容器能够同时显示的slides数量
+      //   spaceBetween: 30, //在slide之间设置距离（单位px）
+      //   freeMode: true, //slide会根据惯性滑动可能不止一格且不会贴合
+      //   pagination: {
+      //     el: '.swiper-pagination',
+      //     clickable :true,
+      //   }
+      // }
     }
   },
   mounted() {
@@ -143,8 +164,17 @@ export default {
       background-size:cover;
     }
     .item-swiper{
-      // to-do
-    }
+        margin:36px auto 52px;
+        .desc{
+          font-size:18px;
+          color:#333333;
+          text-align:center;
+        }
+        img{
+          width:100%;
+          height: 100%;
+        }
+      }
     .item-video{
       height: 1044px;
       background-color: #070708;
